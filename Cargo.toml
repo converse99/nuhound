@@ -1,0 +1,20 @@
+[package]
+name = "nuhound"
+description = "Improve error handling capability"
+repository = "https://github.com/converse99/nuhound"
+homepage = "https://github.com/converse99/nuhound"
+readme = "README.md"
+license = "MIT OR Apache-2.0"
+keywords = ["error", "debugging", "Result", "Option"]
+version = "0.1.0"
+edition = "2021"
+
+[dev-dependencies]
+regex = "1"
+
+[features]
+# To help diagnose errors, use the disclose feature when compiling.
+# This ensures that the source file name and line number are displayed
+# when using the here! macro.
+# example usage: cargo build --features=disclose
+disclose = []
