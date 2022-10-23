@@ -6,7 +6,7 @@ homepage = "https://github.com/converse99/nuhound"
 readme = "README.md"
 license = "MIT OR Apache-2.0"
 keywords = ["error", "debugging", "Result", "Option"]
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 
 [dev-dependencies]
