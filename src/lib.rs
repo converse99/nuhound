@@ -268,6 +268,7 @@ pub struct Nuhound {
 }
 
 impl Error for Nuhound {
+    /// Returns the source of the current error or `None` if no source information is available.
     fn source(&self) -> Option<&(dyn Error + 'static)> {
         match &self.source {
             Some(source) => Some(source.as_ref()),
@@ -343,6 +344,9 @@ impl Nuhound {
     }
 }
 
+/// Provides `Nuhound` trait support to `std::result::Result`. Remember to `use` this if you're
+/// intending to use the `report()` and/or `easy()` methods with values of type `Result<T, E>` or
+/// functions that return `Result<T, E>`.
 pub trait ResultExtension<T, E> {
     /// Calls op lazily if the result is Err, otherwise returns the Ok value of self.
     ///
@@ -435,6 +439,9 @@ impl<T, E: Error> ResultExtension<T, E> for Result<T, E> {
     }
 }
 
+/// Provides `Nuhound` trait support to `std::option::Option`. Remember to `use` this if you're
+/// intending to use the `report()` and/or `easy()` methods with values of type `Option<T>` or functions that
+/// return `Option<T>`.
 pub trait OptionExtension<T> {
     /// Transforms the `Option<T>` into a [`Result<T, Nuhound>`]
     ///
