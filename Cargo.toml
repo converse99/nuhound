@@ -6,8 +6,11 @@ homepage = "https://github.com/converse99/nuhound"
 readme = "README.md"
 license = "MIT OR Apache-2.0"
 keywords = ["error", "debugging", "Result", "Option"]
-version = "0.1.2"
-edition = "2021"
+version = "0.2.0"
+edition = "2024"
+
+[dependencies]
+proc_nuhound = "0.1.0"
 
 [dev-dependencies]
 regex = "1"
@@ -18,3 +21,4 @@ regex = "1"
 # when using the here! macro.
 # example usage: cargo build --features=disclose
 disclose = []
+
