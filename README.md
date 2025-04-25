@@ -20,7 +20,7 @@ Remember to add this to Cargo.toml:
 # This ensures that the source file name and line number are displayed
 # when using the here!, convert!, examine! and custom! macros.
 # example usage: cargo build --features=disclose
-isclose = []
+disclose = []
 ```
 ## Examples
 
