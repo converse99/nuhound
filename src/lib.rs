@@ -511,6 +511,12 @@ impl fmt::Display for Nuhound {
     }
 }
 
+impl From<&str> for Nuhound {
+    fn from(value: &str) -> Nuhound {
+        Nuhound::new(value.to_string())
+    }
+}
+
 impl Nuhound {
     /// Create a Nuhound error.
     ///
